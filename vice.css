@@ -168,7 +168,7 @@
 /* Fleet Page Specific */
 .fleet-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
-                url('/Vice-Images/Background.jpg');
+                url('Vice-Images/Background.jpg');
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -182,7 +182,7 @@
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 800;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .fleet-hero p {
@@ -192,9 +192,11 @@
 
 .fleet-showcase {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/Vice-Images/Background.jpg);
+                url('Vice-Images/Background.jpg');
     background-repeat: no-repeat;
-   
+    background-position: center;
+    background-attachment: fixed;
+    padding: 4rem 5%;
 }
 
 .fleet-grid {
