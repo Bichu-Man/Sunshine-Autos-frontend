@@ -27,6 +27,28 @@
     color: #e5989b;
     letter-spacing: -1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;    
+}
+
+.logo:hover {
+    color: #ffffff;
+    transition: color 0.3s ease;}
+
+    .nav-checkbox {
+    display: none;
+}
+
+.nav-links {
+    display: flex;          
+    align-items: center;
+    list-style: none;       
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 0rem;   
 }
 
 .nav-links a {
@@ -50,10 +72,33 @@
     transition: width 0.4s ease;
 }
 
+
+
 .nav-links a:hover::after,
 .nav-links .active::after {
     width: 100%;
 }
+
+/*this is a later additon, for mobile*/
+
+.nav-checkbox {
+    display: none; 
+}
+
+.nav-toggler {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggler span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
 
 .auth-btn {
     background: linear-gradient(135deg, #e5989b 0%, #b5838d 100%);
@@ -72,7 +117,7 @@
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('/Vice-Images/Background.jpg');
+                url('Vice-Images/Background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -122,7 +167,7 @@
 
 /* Fleet Page Specific */
 .fleet-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
                 url('/Vice-Images/Background.jpg');
     height: 50vh;
     display: flex;
@@ -221,8 +266,8 @@
 
 /* Auth Page */
 .auth-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/Vice-Images/Background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+                url('Vice-Images/Background.jpg');
     min-height: 100vh;
     padding: 8rem 5% 4rem;
     display: flex;
@@ -293,8 +338,8 @@
 }
 
 .contact-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/Vice-Images/Background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+                url('Vice-Images/Background.jpg');
     min-height: 100vh;
     padding: 8rem 5% 4rem;
     color: #fff;
@@ -368,8 +413,8 @@
 
 /* About Page */
 .about-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/Vice-Images/Background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+                url('Vice-Images/Background.jpg');
     padding: 8rem 5% 4rem;
     color: #fff;
     background-size: cover;
@@ -414,21 +459,38 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    .nav-links {
-        display: none;
-    }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.2rem; }
 
     .about-grid,
     .contact-container,
     .auth-container {
         grid-template-columns: 1fr;
+    }
+
+    .nav-toggler {
+        display: flex; 
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: rgba(13, 17, 23, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 2rem 0;
+        z-index: 1001;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+        margin-left: 0;     
+    }
+
+    .nav-checkbox:checked ~ .nav-links {
+        display: flex;
     }
 }
