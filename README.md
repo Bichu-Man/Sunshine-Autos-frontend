@@ -9,3 +9,4 @@ Fluidity: Utilized a CSS Grid auto-fit system for the fleet showcase, allowing f
 
 Depth: Applied background-attachment: fixed to create optical layering between the content and the horizon.
 
+https://bichu-man.github.io/Sunshine-Autos-frontend/ for quick access
